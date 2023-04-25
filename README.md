@@ -5,7 +5,7 @@ Desktop
 
 Mobile
 <p align="center">
-  <img src="assets/mobile_demo.gif" width="300"/>
+  <img src="assets/mobile_demo.gif" height="400" width="250"/>
 </p>
 
 Real-time American Sign Language (ASL) to text translation using your laptop or mobile device's webcam! The translator is capable of translating the all letters in the ASL alphabet (except the moving gestures 'J' and 'Z'). Make sure to use Chrome and enable WebGL for best performace!
