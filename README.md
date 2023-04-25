@@ -1,47 +1,43 @@
-# Getting Started with Create React App
+![Translator Demo](assets/desktop_demo.gif) ![Translator Demo](assets/mobile_demo.gif)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Real-time American Sign Language (ASL) to text translation using your laptop or mobile device's webcam! The translator is capable of translating the all letters in the ASL alphabet (except the moving gestures 'J' and 'Z'). Make sure to use Chrome and enable WebGL for best performace!
 
-## Available Scripts
+# Features
 
-In the project directory, you can run:
+The translator provides the following features:
 
-### `npm start`
+- Fingerspell words
+- Change translation speed based on signing skill level
+- Text to speech for translated text
+- Inferred spaces if no hand is detected
+- Delete letters by holding both hands up
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# How it works
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This model leverages the [MediaPipe Hands](https://developers.google.com/mediapipe/solutions/vision/hand_landmarker) model to detect 21 hand keypoints from the webcam. These keypoints are then passed through a dense layers model to classify the hand sign with a 96% validation accuracy. 
 
-### `npm test`
+# Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can try it for yourself at [Signr.]()
 
-### `npm run build`
+Alternatively you can set up a local development environment with the instructions below
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Development Environment (Local)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Follow these simple instructions to set up a local development environment.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository and install dependencies:
 
-### `npm run eject`
+  ```bash
+  git clone https://github.com/lyannul/asl-to-text.git
+  cd asl-to-text
+  npm install
+  ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. To start the local development server:
+  ```bash
+  npm start
+  ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**That's it, you are good to go! 👾**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-# asl-to-text
