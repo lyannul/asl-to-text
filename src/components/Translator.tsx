@@ -148,6 +148,7 @@ const Translator = () => {
   };
 
   const handleResetClick = () => {
+    setLetter("");
     setSentence("");
   };
 
@@ -242,8 +243,12 @@ const Translator = () => {
             open={howToModalOpen}
             setOpen={setHowToModalOpen}
             title="How to Use"
-            children={<div><p>Coming soon...</p></div>}
-            icon={<FaHandsHelping/>}
+            children={
+              <div>
+                <p>Coming soon...</p>
+              </div>
+            }
+            icon={<FaHandsHelping />}
           />
 
           {/* Help Modal */}
@@ -254,9 +259,9 @@ const Translator = () => {
             children={
               <div className="flex flex-col m-3">
                 <p>
-                  Welcome to the American Sign Language (ASL) to text translator! 
-                  For help on how to use the translator or for an ASL alphabet chart,
-                  select one of the options below!
+                  Welcome to the American Sign Language (ASL) to text
+                  translator! For help on how to use the translator or for an
+                  ASL alphabet chart, select one of the options below!
                 </p>
                 <div className="grid grid-cols-2 mt-5 gap-10">
                   <button
@@ -329,7 +334,12 @@ const Translator = () => {
             </button>
           )}
           {sentence ? (
-            <span className="text-2xl mt-2 break-words w-max">{sentence}</span>
+            <>
+              <span className="text-2xl mt-2 break-words w-max">
+                {sentence}
+              </span>
+              <span className="animate-[blink_1s_ease-in-out_infinite] text-2xl text-primary-400">_</span>
+            </>
           ) : (
             <span className="text-2xl mt-2 italic opacity-70">
               Begin signing to translate to text!
